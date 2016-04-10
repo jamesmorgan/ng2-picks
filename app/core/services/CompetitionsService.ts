@@ -8,6 +8,7 @@ import "rxjs/add/operator/share";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/publishReplay";
 import "rxjs/Rx";
+import {Selection} from "../domain/Selection";
 
 @Injectable()
 export class CompetitionsService {
@@ -76,14 +77,14 @@ export class CompetitionsService {
         return observer;
     }
 
-    public deleteCompetition(compId:String) {
+    public deleteCompetition(compId:String):Observable<any> {
         console.log('deleteCompetition() ', compId);
         // FIXME this won't work if the users has not already populate the this.competitions list
         var compIdx = this.competitions.findIndex((comp:Competition) => {
             return comp._id === compId;
         });
 
-        var observer = this._competitionApi.delete(compId);
+        var observer:Observable<any> = this._competitionApi.delete(compId);
         observer.subscribe(
             (result) => {
                 console.info('Result deleteCompetition()', result);
@@ -96,16 +97,17 @@ export class CompetitionsService {
         return observer;
     }
 
-    public addSelectionToCompetition(compId:String, selection:Selection) {
+    public addSelectionToCompetition(compId:String, selection:Selection):any {
         console.log('addSelectionToCompetition() ', compId, selection);
-        return this._competitionApi.saveSelectionForComp(compId, selection)
-            .subscribe(
-                res => {
-                    console.info('Successfully added selection', res);
-                    this.publishToObservers();
-                },
-                err => console.error('Failed to update status', err)
-            );
+        var observer:Observable<any> = this._competitionApi.saveSelectionForComp(compId, selection);
+        observer.subscribe(
+            res => {
+                console.info('Successfully added selection', res);
+                this.publishToObservers();
+            },
+            err => console.error('Failed to update status', err)
+        );
+        return observer;
     }
 
     public updateStatus(compId:String, status:Status):void {

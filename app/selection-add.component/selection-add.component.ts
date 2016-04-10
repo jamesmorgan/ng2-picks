@@ -1,4 +1,4 @@
-import {Component, Input, } from "angular2/core";
+import {Component, Input} from "angular2/core";
 import {CompetitionsService} from "../core/services/CompetitionsService";
 import {Selection} from "../core/domain/Selection";
 
@@ -22,17 +22,19 @@ export class SelectionAddComponent {
 
     addNewSelection(potIndex:number) {
         // FIXME - do I need to do this; see discussion: https://github.com/angular/angular/issues/4843
-        // this.newSelection = this.selections.find((obj:Selection) => obj._id === this.newSelectionIdStr);
-        //
-        // // update potIndex on selection
-        // this.newSelection.potIndex = potIndex;
-        // this.newSelection.setSelectionDefaults();
-        //
-        // console.log(this.newSelection);
-        // console.log(this.compId);
-        //
-        // // add selected selection to comp
-        // this._competitionsService.addSelectionToCompetition(this.compId, this.newSelection);
+        this.newSelection = this.selections.find((obj:Selection) => {
+            return obj._id === this.newSelectionIdStr;
+        });
+
+        // update potIndex on selection
+        this.newSelection.potIndex = potIndex;
+        this.newSelection.setSelectionDefaults();
+
+        console.log(this.newSelection);
+        console.log(this.compId);
+
+        // add selected selection to comp
+        this._competitionsService.addSelectionToCompetition(this.compId, this.newSelection);
     }
 
 }

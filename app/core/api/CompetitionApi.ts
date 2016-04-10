@@ -3,6 +3,7 @@ import {Observable} from "rxjs/Observable";
 import {Injectable} from "angular2/core";
 import {Status} from "../domain/Status";
 import {Competition} from "../domain/Competition";
+import {Selection} from "../domain/Selection";
 import {BASE_URL, json} from "./Api";
 import "rxjs/add/operator/share";
 import "rxjs/add/operator/map";
