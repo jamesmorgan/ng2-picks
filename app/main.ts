@@ -1,7 +1,7 @@
-import {bootstrap}    from 'angular2/platform/browser'
+import { bootstrap }    from '@angular/platform-browser-dynamic';
 import {AppComponent} from './app.component/app.component'
-import {enableProdMode} from "angular2/core";
-import {HTTP_PROVIDERS} from 'angular2/http';
+import {enableProdMode} from "@angular/core";
+import {HTTP_PROVIDERS} from '@angular/http';
 
 /**
  * This will disabled some exceptions!

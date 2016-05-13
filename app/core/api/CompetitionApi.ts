@@ -1,6 +1,6 @@
-import {Http, Response} from "angular2/http";
+import {Http, Response} from "@angular/http";
 import {Observable} from "rxjs/Observable";
-import {Injectable} from "angular2/core";
+import {Injectable} from "@angular/core";
 import {Status} from "../domain/Status";
 import {Competition} from "../domain/Competition";
 import {Selection} from "../domain/Selection";

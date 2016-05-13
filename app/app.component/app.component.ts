@@ -1,5 +1,6 @@
-import {Component} from "angular2/core";
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from "angular2/router";
+import {Component} from "@angular/core";
+// import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from "@angular/router";
+import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouteConfig} from '@angular/router-deprecated'; // TODO this will change
 import {AdminUsersDashboardComponent} from "../admin-users-dashboard.component/admin-users-dashboard.component";
 import {CompetitionsService} from "../core/services/CompetitionsService";
 import {UsersService} from "../core/services/UsersService";

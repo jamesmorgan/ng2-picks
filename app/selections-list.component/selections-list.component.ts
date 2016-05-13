@@ -1,4 +1,4 @@
-import {Component, OnDestroy, Input, ChangeDetectionStrategy} from "angular2/core";
+import {Component, OnDestroy, Input, ChangeDetectionStrategy} from "@angular/core";
 import {SelectionItemComponent} from "../selection-item.component/selection-item.component";
 import {Selection} from "../core/domain/Selection";
 

@@ -1,10 +1,10 @@
-import {Component, OnDestroy, ChangeDetectionStrategy} from "angular2/core";
+import {Component, OnDestroy, ChangeDetectionStrategy} from "@angular/core";
 import {FormCompetition} from "../core/domain/Competition";
 import {Status} from "../core/domain/Status";
 import {GamesService} from "../core/services/GameService";
 import {Subscription} from "rxjs/Subscription";
 import {CompetitionsService} from "../core/services/CompetitionsService";
-import {Router} from "angular2/router";
+import {Router} from '@angular/router-deprecated'; // TODO this will change
 
 @Component({
     selector: 'competition-add-form',

@@ -1,9 +1,9 @@
-import {Component, OnDestroy, OnInit, ChangeDetectionStrategy} from "angular2/core";
+import {Component, OnDestroy, OnInit, ChangeDetectionStrategy} from "@angular/core";
 import {CompetitionsListComponent} from "../competitions-list.component/competitions-list.component";
 import {Competition} from "../core/domain/Competition";
 import {CompetitionsService} from "../core/services/CompetitionsService";
 import {Subscription} from "rxjs/Subscription";
-import {ROUTER_DIRECTIVES} from "angular2/router";
+import {ROUTER_DIRECTIVES} from '@angular/router-deprecated'; // TODO this will change
 
 @Component({
     selector: 'admin-dashboard',

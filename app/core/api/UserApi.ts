@@ -1,7 +1,7 @@
 import {BASE_URL} from "./Api";
-import {Http} from "angular2/http";
+import {Http} from "@angular/http";
 import {User} from "../domain/User";
-import {Injectable} from "angular2/core";
+import {Injectable} from "@angular/core";
 
 @Injectable()
 export class UserApi {

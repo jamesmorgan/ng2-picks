@@ -1,7 +1,7 @@
 import {Selection} from "../domain/Selection";
 import {BASE_URL} from "./Api";
-import {Http} from "angular2/http";
-import {Injectable} from "angular2/core";
+import {Http} from "@angular/http";
+import {Injectable} from "@angular/core";
 
 @Injectable()
 export class SelectionApi {

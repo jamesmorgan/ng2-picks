@@ -1,4 +1,4 @@
-import {Injectable} from "angular2/core";
+import {Injectable} from "@angular/core";
 import {User} from "../domain/User";
 import {Subject} from "rxjs/Subject";
 import {UserApi} from "../api/UserApi";

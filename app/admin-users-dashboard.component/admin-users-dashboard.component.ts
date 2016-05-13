@@ -1,4 +1,4 @@
-import {Component, OnDestroy, ChangeDetectionStrategy, OnInit} from "angular2/core";
+import {Component, OnDestroy, ChangeDetectionStrategy, OnInit} from "@angular/core";
 import {User} from "../core/domain/User";
 import {UsersService} from "../core/services/UsersService";
 import {Subscription} from "rxjs/Subscription";

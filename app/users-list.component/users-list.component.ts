@@ -1,4 +1,4 @@
-import {Component, OnDestroy, Input, ChangeDetectionStrategy} from "angular2/core";
+import {Component, OnDestroy, Input, ChangeDetectionStrategy} from "@angular/core";
 import {User} from "../core/domain/User";
 
 @Component({

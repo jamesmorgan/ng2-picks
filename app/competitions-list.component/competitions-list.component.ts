@@ -1,5 +1,5 @@
-import {Component, OnDestroy, Input, ChangeDetectionStrategy} from "angular2/core";
-import {Router} from "angular2/router";
+import {Component, OnDestroy, Input, ChangeDetectionStrategy} from "@angular/core";
+import {Router} from '@angular/router-deprecated'; // TODO this will change
 import {Competition} from "../core/domain/Competition";
 import {CompetitionStatusComponent} from "../competition-status.component/competition-status.component";
 

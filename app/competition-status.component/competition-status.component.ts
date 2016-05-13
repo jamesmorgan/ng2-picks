@@ -1,4 +1,4 @@
-import {Component, Input, ChangeDetectionStrategy} from "angular2/core";
+import {Component, Input, ChangeDetectionStrategy} from "@angular/core";
 import {CompetitionsService} from "../core/services/CompetitionsService";
 import {Status} from "../core/domain/Status";
 import {Competition} from "../core/domain/Competition";
