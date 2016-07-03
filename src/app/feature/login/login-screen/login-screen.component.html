@@ -1,6 +1,31 @@
 <h2>LOGIN</h2>
 <p>{{message}}</p>
 <p>
-  <button (click)="login()" *ngIf="!authService.isLoggedIn">Login</button>
+  <!--<button (click)="login()" *ngIf="!authService.isLoggedIn">Login</button>-->
   <button (click)="logout()" *ngIf="authService.isLoggedIn">Logout</button>
 </p>
+
+<form *ngIf="!authService.isLoggedIn" #loginForm="ngForm">
+  <div class="form-group">
+    <label for="token">Bearer Token</label>
+    <input type="text" class="form-control" required
+           [(ngModel)]="model.token"
+           id="token" name="token" #token="ngModel">
+    <div [hidden]="token.valid || token.pristine" class="alert alert-danger">
+      Token is required
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-default"
+          [disabled]="!loginForm.form.valid"
+          (click)="login()">
+    Login
+  </button>
+
+  <!-- NOT SHOWN IN DOCS -->
+  <div>
+    <hr>
+    Name via form.controls = {{showFormControls(heroForm)}}
+  </div>
+  <!-- - -->
+</form>

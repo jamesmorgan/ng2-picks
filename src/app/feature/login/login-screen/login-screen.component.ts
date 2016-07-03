@@ -1,4 +1,5 @@
 import {Component, OnInit} from "@angular/core";
+import {NgForm} from "@angular/forms";
 import {AuthService} from "../auth.service";
 import {Router} from "@angular/router";
 
@@ -11,6 +12,10 @@ import {Router} from "@angular/router";
 export class LoginScreenComponent implements OnInit {
 
   message:string;
+
+  model = {
+    token: String
+  };
 
   constructor(public authService:AuthService, public router:Router) {
     this.setMessage();
@@ -42,4 +47,7 @@ export class LoginScreenComponent implements OnInit {
     this.setMessage();
   }
 
+  showFormControls(form: NgForm) {
+    return form;
+  }
 }
