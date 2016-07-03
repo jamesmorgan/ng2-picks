@@ -7,6 +7,11 @@ import 'rxjs/add/operator/delay';
 
 @Injectable()
 export class AuthService {
+
+  // TODO - hold ref to Bearer token
+  // capture bearing token on login screen
+  // use this to determine if logged in out
+
   isLoggedIn: boolean = false;
 
   login() {
