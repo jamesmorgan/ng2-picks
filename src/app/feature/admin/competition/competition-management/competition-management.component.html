@@ -1,0 +1,16 @@
+<h4>
+  Competition Management
+</h4>
+
+<div>
+  <a class="nav-link" routerLink="/admin">Admin Dashboard</a> |
+  <hr>
+  <a class="nav-link" routerLink="/admin/competition-management">List</a> |
+  <a class="nav-link" routerLink="add">Add</a> |
+  <a class="nav-link" [routerLink]="['edit', '123']">Edit</a>
+  <hr>
+</div>
+
+<div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,14 @@
+<h4>
+  Home
+</h4>
+
+<div>
+  <a class="nav-link" routerLink="/admin/game-management">Game Management</a>
+  <a class="nav-link" routerLink="/admin/competition-management">Competition Management</a>
+  <a class="nav-link" routerLink="/admin/user-management">User Management</a>
+  <a class="nav-link" routerLink="/admin/league-management">League Management</a>
+</div>
+
+<div>
+  <competitions-list prefixBasePath='competition-management/' [competitions]="competitions"></competitions-list>
+</div>
