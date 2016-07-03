@@ -44,6 +44,7 @@ const barrels: string[] = [
   'app/componenets/games-list',
   'app/componenets/leagues-list',
   'app/feature/league-management',
+  'app/feature/login/login-screen',
   /** @cli-barrel */
 ];
 

@@ -18,6 +18,7 @@ import {CompetitionManagementEditComponent} from "./feature/admin/competition/co
 import {GameManagementComponent} from "./feature/game-management/game-management.component";
 import {LeagueManagementComponent} from "./feature/league-management/league-management.component";
 import {UserManagementComponent} from "./feature/user-management/user-management.component";
+import {LoginScreenComponent} from "./feature/login/login-screen/login-screen.component";
 
 @Component({
   moduleId: module.id,
@@ -35,6 +36,7 @@ import {UserManagementComponent} from "./feature/user-management/user-management
     LeaguesService, LeagueApi,
   ],
   precompile: [
+    LoginScreenComponent,
     AdminDashboardComponent,
     GameManagementComponent,
     LeagueManagementComponent,
